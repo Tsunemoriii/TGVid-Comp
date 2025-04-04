@@ -2,9 +2,11 @@
 #    Improved By @Zylern
 
 from decouple import config
-from .config import THUMBNAIL  # Adjust based on where THUMBNAIL is defined 
+def some_function():  
+    from bot.config import THUMBNAIL  
 THUMBNAIL = "http://example.com/image.jpg"  # Define the variable  
 os.system(f"wget {THUMBNAIL} -O thumb.jpg")  # Use the variable  
+THUMBNAIL = "path/to/thumbnail" 
 
 try:
     APP_ID = config("APP_ID", default="4560655", cast=int)
